@@ -30,8 +30,11 @@ public class Main {
             System.out.println("Essa operação não é válida para esse sistema");
             return;
         }
-
-        System.out.printf(Locale.US, "O Resultado desejado é: %.2f\n", resultado);
+        if (Math.floor(resultado) == resultado) {
+            System.out.println("O Resultado desejado é: " + (int) resultado);
+        } else {
+            System.out.printf(Locale.US, "O Resultado desejado é: %.2f\n", resultado);
+        }
 
         sc.close();
     }
